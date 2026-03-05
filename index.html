@@ -18,6 +18,25 @@
       --tag-bg: #f0ebe5;
     }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #181818;
+        --card: #242424;
+        --text: #e8e3dc;
+        --muted: #9b9490;
+        --border: #333333;
+        --tag-bg: #2e2a25;
+      }
+      .card-desc { color: #c0bab2 !important; }
+      .fri .card-tip { background: #2a1f1e !important; color: #e8a09c !important; }
+      .sat .card-tip { background: #1a2535 !important; color: #8bbdd4 !important; }
+      .sun .card-tip { background: #1e2a18 !important; color: #99c070 !important; }
+      .mon .card-tip { background: #251e15 !important; color: #c49a6a !important; }
+      .map-btn { background: #2e2a25 !important; color: var(--text) !important; border-color: var(--border) !important; }
+      .map-btn:hover { background: #3a3530 !important; }
+      .days-nav a { filter: brightness(0.85); }
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -267,6 +286,41 @@
 
     .tip-icon { margin-right: 4px; }
 
+    .card-map {
+      margin-top: 12px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 160px;
+    }
+
+    .card-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .map-btn:hover {
+      background: var(--border);
+    }
+
     footer {
       text-align: center;
       padding: 24px;
@@ -339,6 +393,10 @@
             После заселения выходите прогуляться по набережной: вечерний Босфор, паромы,
             запах моря и жаренных каштанов.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9698%2C41.0205%2C28.9798%2C41.0265&amp;layer=mapnik&amp;marker=41.0235%2C28.9748" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=41.0235,28.9748" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -365,6 +423,10 @@
           <div class="card-tip">
             <span class="tip-icon">⚠️</span>Бронь обязательна.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9722%2C41.0211%2C28.9822%2C41.0271&amp;layer=mapnik&amp;marker=41.0241%2C28.9772" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Karaköy+Lokantası+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -409,6 +471,10 @@
           <div class="card-tip">
             <span class="tip-icon">💡</span>Приезжайте до 10 утра — туристические группы появляются позже, внутри можно дышать.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9752%2C41.0056%2C28.9852%2C41.0116&amp;layer=mapnik&amp;marker=41.0086%2C28.9802" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Hagia+Sophia+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -432,6 +498,10 @@
             Компактнее и атмосфернее Гранд Базара. Специи горками, турецкий рахат-лукум,
             сухофрукты, сыры. Возьмите здесь чай и пахлаву — и ешьте прямо там.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9659%2C41.0135%2C28.9759%2C41.0195&amp;layer=mapnik&amp;marker=41.0165%2C28.9709" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Mısır+Çarşısı+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -455,6 +525,10 @@
             игра света. Ищите старые ханы за основными торговыми рядами — там тишина
             и средневековый воздух.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9630%2C41.0077%2C28.9730%2C41.0137&amp;layer=mapnik&amp;marker=41.0107%2C28.9680" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Grand+Bazaar+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -483,6 +557,10 @@
           <div class="card-tip">
             <span class="tip-icon">⚠️</span>Бронируйте сейчас — воскресенье у них выходной, только суббота.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9720%2C41.0293%2C28.9820%2C41.0353&amp;layer=mapnik&amp;marker=41.0323%2C28.9770" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Mikla+Restaurant+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -528,6 +606,10 @@
           <div class="card-tip">
             <span class="tip-icon">⚠️</span>Проверьте часы работы перед поездкой — статус мечети/музея периодически меняется.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9350%2C41.0321%2C28.9450%2C41.0381&amp;layer=mapnik&amp;marker=41.0351%2C28.9400" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Kariye+Camii+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -556,6 +638,10 @@
           <div class="card-tip">
             <span class="tip-icon">💡</span>Садитесь на верхнюю открытую палубу. Оплата картой прямо на турникете.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9662%2C41.0145%2C28.9762%2C41.0205&amp;layer=mapnik&amp;marker=41.0175%2C28.9712" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Eminönü+Ferry+Terminal+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -580,6 +666,10 @@
             галереи. Подняться к Галатской башне, посмотреть на освещённый пролив.
             Импровизируйте.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9692%2C41.0230%2C28.9792%2C41.0290&amp;layer=mapnik&amp;marker=41.0260%2C28.9742" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Galata+Tower+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -641,6 +731,10 @@
             (Dice Kayek, Arzu Kaprol), хорошие кафе. Никакой базарной суеты —
             спокойный, ухоженный район для последнего дня.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9879%2C41.0461%2C28.9979%2C41.0521&amp;layer=mapnik&amp;marker=41.0491%2C28.9929" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Nişantaşı+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
@@ -666,6 +760,10 @@
           <div class="card-tip">
             <span class="tip-icon">⚠️</span>Бронь обязательна.
           </div>
+          <div class="card-map">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=28.9722%2C41.0211%2C28.9822%2C41.0271&amp;layer=mapnik&amp;marker=41.0241%2C28.9772" loading="lazy"></iframe>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Karaköy+Lokantası+Istanbul" target="_blank">Открыть в Google Maps ↗</a>
         </div>
       </div>
 
